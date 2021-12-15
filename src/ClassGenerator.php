@@ -53,7 +53,7 @@ abstract class ClassGenerator
                     if(!is_dir(dirname($file))) {
                         mkdir(dirname($file), recursive: true);
                     }
-                    file_put_contents($file, "<?php\n" . $conts);
+                    file_put_contents($file, $conts);
                     return;
                 }
             }
