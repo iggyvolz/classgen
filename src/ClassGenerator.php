@@ -7,8 +7,6 @@ use Stringable;
 
 abstract class ClassGenerator
 {
-    public final function __construct(){}
-
     /**
      * @var array<string,ClassGenerator>
      */
