@@ -63,11 +63,11 @@ abstract class ClassGenerator
     protected abstract function isValid(string $class): bool;
 
     protected abstract function generate(string $class): string|Stringable;
-
-    public static function register(): void
+    
+    public static function register(mixed ...$args): void
     {
         if(!array_key_exists(static::class, self::$autoloaders)) {
-            self::$autoloaders[static::class] = new static();
+            self::$autoloaders[static::class] = new static(...$args);
         }
     }
 }
